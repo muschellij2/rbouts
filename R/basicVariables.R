@@ -1,7 +1,7 @@
 
 nonWear= function(df) {
   #' summarises Non Wear time.
-  #' Criteria: GGIR. Viene de los epochs, creado en fase 1. FALTA describir.
+  #' Criteria: GGIR. Viene de los epochs, creado en fase 1. FALTA describirlo.
   #' @param df Dataframe of epochs with two columns: datetime and ENMO
   #' @return a list with a summary of the periods matching the criteria
   #' @export
