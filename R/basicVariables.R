@@ -290,22 +290,3 @@ INA_Break10min=function(df) {
     getSummary()
 }
 
-
-
-
-
-#
-basicVariables=list(nonWear=nonWear,
-                    bedGGIR=bedGGIR,
-                    isOn=isOn,
-                    VPA_B1=VPA_B1,
-                    MVPA_B10=MVPA_B10,
-                    MVPA_B1=MVPA_B1,
-                    LPA_B1=LPA_B1,
-                    OINA_B1=OINA_B1,
-                    OINA_B30=OINA_B30,
-                    INA_B1=INA_B1,
-                    INA_B30=INA_B30,
-                    SIB=SIB,
-                    SIB2=SIB2,
-                    MuyQuieto=MuyQuieto)

@@ -13,10 +13,10 @@
 #'
 #' @export
 getSummary=function(df,offset=dhours(0),minimoHorasValidas=20,maximoHorasNonWear=2){
-  firstDay=date(df[["timestamp"]][1])
+  firstDay=lubridate::as_date(df[["timestamp"]][1])
   df= df %>%
     mutate(
-      day=date(timestamp+offset),
+      day=lubridate::as_date(timestamp+offset),
       diasPasados=as.integer(difftime(day,firstDay,units="days"))
     )
 
