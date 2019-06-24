@@ -1,4 +1,4 @@
-Package: acelerometria
+Package: rbouts
 Type: Package
 Title: A Tidy Framework For Accelerometry
 Version: 0.1.0
