@@ -11,7 +11,7 @@ intervalIntersectv2=function(interval1,interval2){
   interval1=interval1 %>% mutate(.dummyColumn=1)
 
   interval2=interval2 %>% mutate(.fromCut=from,.toCut=to) %>% mutate(.dummyColumn=1) %>% select(.fromCut,.toCut,.dummyColumn,everything(),-from,-to)
-  resultado=interval1 %>% full_join(interval2) %>%
+  resultado=interval1 %>% full_join(interval2,by=".dummyColumn") %>%
     mutate(solapan=as.integer(as.period(lubridate::intersect(interval(from,to),interval(.fromCut,.toCut)),"seconds"))) %>%
     filter(!is.na(solapan)) %>% as_tibble() %>%
     mutate(fromNew=pmax(from,.fromCut),toNew=pmin(to,.toCut)) %>%

@@ -11,7 +11,11 @@
 connectOverInterval=function(interval1,interval2){
   interval1=interval1 %>%
     mutate( falta = lead(from,1),.dummy=1)
-  interval2=interval2 %>%
+
+  ##Preparativos sobre interval2 para que contenga todos los intervalos de interval1
+
+
+    interval2=intervalMelt(interval1 %>% select(from,to), interval2%>% select(from,to)) %>%
     transmute(fromSup = from, toSup=to,.dummy=1)
 
 previo=  interval1 %>%

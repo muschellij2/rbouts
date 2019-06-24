@@ -18,9 +18,10 @@ interval2criterio=function(ts,intervalos,durEpoch=dseconds(5)){
   if(is.null(intervalos)  | nrow(intervalos)==0) return(criterio)
 
   for(i in 1:nrow(intervalos)){
-    iDesde = difftime(intervalos[["from"]][i],ts[1])/durEpoch
-    iHasta = difftime(intervalos[["to"]][i],ts[1])/durEpoch
-    criterio[1+iDesde:iHasta]=1
+    iDesde = min(difftime(intervalos[["from"]][i],ts[1])/durEpoch,length(ts)-1)
+    iHasta = min(difftime(intervalos[["to"]][i],ts[1])/durEpoch,length(ts)-1)
+#    message(iDesde, " ",iHasta,"\n")
+    if(iDesde<=iHasta) criterio[1+iDesde:iHasta]=1
   }
 
   criterio
