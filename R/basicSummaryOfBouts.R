@@ -18,7 +18,7 @@ basicSummaryOfBouts=function(bouts,listCalendarsAndBouts,progreso=NULL){
     
     summaryBoutsByCalendar(bouts,validcalendars,listCalendarsAndBouts) %>%
       mutate(ratio=duration/durationRef) %>%
-      mutate(time=duration/secondsPerUnit[variable]) 
+      mutate(time=duration/seconds2Unit(variable)) 
   } else {
     progreso=dplyr::progress_estimated(length(bouts), min_time = 0)
     map( bouts, ~ basicSummaryOfBouts(.x,listCalendarsAndBouts,progreso)) %>% list2df("fileBIN")
