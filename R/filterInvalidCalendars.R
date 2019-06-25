@@ -10,5 +10,5 @@
 filterInvalidCalendars=function(calendars, bouts, labelbed="bed"){
   calendars %>% list2df(label =".etiqueta") %>% 
     left_join(computeInvalidCalendars(calendars,bouts,labelbed), by = c("day", "label")) %>%
-    filter(is.na(exclusion)) %>% select(-exclusion) %>% df2list()
+    filter(is.na(exclusion)) %>% select(-exclusion) %>% df2list("label")
 }
