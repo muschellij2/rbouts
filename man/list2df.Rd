@@ -4,7 +4,7 @@
 \alias{list2df}
 \title{Convert a recursive list of dataframes to one dataframe.}
 \usage{
-list2df(lista, label)
+list2df(lista, label = "")
 }
 \arguments{
 \item{lista}{}

@@ -1,5 +1,13 @@
 
 
+#' Title
+#'
+#' @param calendars 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 part_WEWD=function(calendars){
   if("data.frame" %in% class(calendars)) calendars %>% mutate(.part=factor(wday(day,week_start = 1)<=5,levels=c(FALSE,TRUE),labels=c("WE","WD"))) %>%
     split(.[[".part"]]) %>% map( ~ select(.,-.part))
@@ -7,6 +15,13 @@ part_WEWD=function(calendars){
 }
 
 
+#' Title
+#'
+#' @param calendars 
+#'
+#' @return
+#' @export
+#'
 part_weekday=function(calendars){
   if("data.frame" %in% class(calendars)) calendars %>% mutate(.part=sprintf("%d-%s",wday(day,label = FALSE,abbr = FALSE,week_start = 1),wday(day,label = TRUE,abbr = TRUE,week_start = 1))) %>%
     split(.[[".part"]]) %>% map( ~ select(.,-.part))
@@ -15,6 +30,13 @@ part_weekday=function(calendars){
 
 
 
+#' Title
+#'
+#' @param calendars 
+#'
+#' @return
+#' @export
+#'
 part_date=function(calendars){
   if("data.frame" %in% class(calendars)) calendars %>%
     mutate(.part=sprintf("%s-%s",day,wday(day,label = TRUE,abbr = TRUE,week_start = 1))) %>%
@@ -23,6 +45,13 @@ part_date=function(calendars){
 }
 
 
+#' Title
+#'
+#' @param calendars 
+#'
+#' @return
+#' @export
+#'
 part_dayNumber=function(calendars,referenceDay=NA){
   if("data.frame" %in% class(calendars)){
     if(is.na(referenceDay)) referenceDay= calendars[["day"]] %>% first()
@@ -40,6 +69,13 @@ part_dayNumber=function(calendars,referenceDay=NA){
 }
 
 
+#' Title
+#'
+#' @param calendars 
+#'
+#' @return
+#' @export
+#'
 part_SatSun=function(calendars){
   if("data.frame" %in% class(calendars)) calendars %>% mutate(.part=as.integer(wday(day,week_start = 1))) %>%
     filter(.part>=6) %>%

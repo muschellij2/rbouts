@@ -4,12 +4,14 @@
 \alias{basicSummaryOfBouts}
 \title{Title}
 \usage{
-basicSummaryOfBouts(listBouts, listCalendarsAndBouts)
+basicSummaryOfBouts(bouts, listCalendarsAndBouts, progreso = NULL)
 }
 \arguments{
-\item{listBouts}{}
+\item{bouts}{}
 
 \item{listCalendarsAndBouts}{}
+
+\item{progreso}{}
 }
 \description{
 Title

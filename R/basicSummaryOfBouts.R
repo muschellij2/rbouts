@@ -1,24 +1,26 @@
 #' Title
 #'
-#' @param listBouts 
+#' @param bouts 
 #' @param listCalendarsAndBouts 
+#' @param progreso 
 #'
 #' @return
 #' @export
 #'
-#' @examples
-basicSummaryOfBouts=function(listBouts,listCalendarsAndBouts){
-  tmpVariables=c(listCalendarsAndBouts %>% unlist(),names(listCalendarsAndBouts))
-  names(tmpVariables)=NULL
-  missingUnits=tmpVariables %>% setdiff(names(secondsPerUnit))
-  if(length(missingUnits)>0){
-    tmpUnits=rep(1,length(missingUnits))
-    names(tmpUnits)=missingUnits
-  }
-  secondsPerUnit=c(secondsPerUnit,tmpUnits)
+basicSummaryOfBouts=function(bouts,listCalendarsAndBouts,progreso=NULL){
   
-  listBouts %>% summaryListOfBoutsByCalendar(listCalendarsAndBouts) %>%
-    mutate(variable=ifelse(variable=="isOn",calendar,variable)) %>%
-    mutate(ratio=duration/durationRef) %>%
-    mutate(time=duration/secondsPerUnit[variable])
+  if("data.frame" %in% class(bouts[[1]])){
+    if(!is.null(progreso)) progreso$tick()$print()
+    validcalendars=computeValidCalendars(bouts,listFunctionalCalendars)
+    bouts=bouts %>% append( map(validcalendars, ~ .x %>% select(from,to)))
+    
+    listCalendarsAndBouts=map2(listCalendarsAndBouts,names(listCalendarsAndBouts),~append(.x,.y))
+    
+    summaryBoutsByCalendar(bouts,validcalendars,listCalendarsAndBouts) %>%
+      mutate(ratio=duration/durationRef) %>%
+      mutate(time=duration/secondsPerUnit[variable]) 
+  } else {
+    progreso=dplyr::progress_estimated(length(bouts), min_time = 0)
+    map( bouts, ~ basicSummaryOfBouts(.x,listCalendarsAndBouts,progreso)) %>% list2df("fileBIN")
+  }
 }

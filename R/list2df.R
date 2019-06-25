@@ -5,10 +5,10 @@
 #'
 #' @return
 #' @export
-list2df=function(lista,label) {
+list2df=function(lista,label="") {
   if("data.frame" %in% class(lista)) return(lista)
   if("list" %in% class(lista) & "data.frame" %in% class(lista[[1]])) {
-    bind_rows(lista,.id = label[1])
+    if(label=="") bind_rows(lista) else bind_rows(lista,.id = label[1])
   }
   else{
     map(lista, ~ list2df(.x,label[-1])) %>% list2df(label[1])
