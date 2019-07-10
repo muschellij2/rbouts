@@ -6,7 +6,11 @@
 #' @export
 epoch2Bouts=function(dfTareas){
 progreso=dplyr::progress_estimated(nrow(dfTareas), min_time = 0)
-listBouts=map2(dfTareas$Nodo,dfTareas$fileBIN, ~ obtenerBouts( .x,.y,progreso=progreso))
+listBouts=pmap(list(Nodo=dfTareas$Nodo,
+                    fileBIN=dfTareas$fileBIN,
+                    desde=dfTareas$desde,
+                    hasta=dfTareas$hasta), 
+               function(Nodo,fileBIN,desde,hasta) obtenerBouts(Nodo,fileBIN,desde,hasta,progreso=progreso))
 names(listBouts)=dfTareas$fileBIN
 listBouts
 }

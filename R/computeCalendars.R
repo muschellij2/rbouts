@@ -7,14 +7,14 @@
 #'
 #' @return
 #' @export
-computeCalendars=function(bouts,listFunctionalCalendars,progreso=NULL){
+computeCalendars=function(bouts,generateCalendars,progreso=NULL,idBIN=NA_character_){
   if( "data.frame" %in% class(bouts[[1]]) )  {
     if(!is.null(progreso)) progreso$tick()$print()
-    map(listFunctionalCalendars, function(calendarFunction) calendarFunction(bouts)) 
+    generateCalendars(bouts,idBIN=idBIN) 
   }
   else
   {
     progreso=dplyr::progress_estimated(length(bouts), min_time = 0)
-    map( bouts, ~ computeCalendars(.x,listFunctionalCalendars,progreso))
+    map( bouts, ~ computeCalendars(.x,generateCalendars,progreso,idBIn=idBIN))
   }
 }

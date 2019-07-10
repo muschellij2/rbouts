@@ -5,14 +5,15 @@
 \title{Dado una lista de bouts, y una lista que contiene funciones de generación de calendarios,
 devuelve lista de calendarios}
 \usage{
-computeCalendars(bouts, listFunctionalCalendars, progreso = NULL)
+computeCalendars(bouts, generateCalendars, progreso = NULL,
+  idBIN = NA_character_)
 }
 \arguments{
 \item{bouts}{}
 
-\item{listFunctionalCalendars}{}
-
 \item{progreso}{}
+
+\item{listFunctionalCalendars}{}
 }
 \description{
 Dado una lista de bouts, y una lista que contiene funciones de generación de calendarios,

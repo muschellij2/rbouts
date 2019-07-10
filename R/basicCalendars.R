@@ -60,7 +60,7 @@ genCalendar_24h=function(bouts,label="24h",first=TRUE,last=TRUE,offsetLabels=dho
 genCalendar_HorarioToHorarioFrom=function(horario1,horario2,label="horario_1_2"){
   horario1  %>%  transmute(from=to,day=day,label=label) %>%
     left_join(horario2 %>% transmute(to=from,day=day),by="day") %>%
-    filter(from<to) %>% select(from,to,day,label)
+    filter(from<to) %>% select(from,to,day)%>% mutate(label=label)
 }
 
 

@@ -8,15 +8,16 @@
 #'
 #' @return
 #' @export
-computeValidCalendars=function(bouts,listFunctionalCalendars,labelbed="bed",progreso=NULL){
+computeValidCalendars=function(bouts,generateCalendars,labelbed="bed",progreso=NULL,idBIN=NA_character_){
 
     if( "data.frame" %in% class(bouts[[1]]) )  {
-    if(!is.null(progreso)) progreso$tick()$print()
-      computeCalendars(bouts,listFunctionalCalendars) %>% filterInvalidCalendars(bouts,labelbed=labelbed)
+    if(!is.null(progreso)) {progreso$tick()$print(); cat ("\t",idBIN)}
+
+      computeCalendars(bouts,generateCalendars,idBIN=idBIN) %>% filterInvalidCalendars(bouts,labelbed=labelbed)
   }
   else
   {
     progreso=dplyr::progress_estimated(length(bouts), min_time = 0)
-     map (bouts, ~ computeValidCalendars(.x,listFunctionalCalendars,labelbed=labelbed,progreso)  )
+     map2(bouts,names(bouts), ~ computeValidCalendars(.x,generateCalendars,labelbed=labelbed,progreso,idBIN=.y)  )
   }
 }

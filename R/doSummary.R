@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param intervalReference 
+#' @param intervalBout 
+#' @param by 
+#'
+#' @return
+#' @export
+#'
 doSummary=function(intervalReference,intervalBout,by="day"){
   if(is.null(intervalReference)|is.null(intervalBout)) return(NULL)
 

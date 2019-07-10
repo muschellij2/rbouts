@@ -4,7 +4,8 @@
 \alias{basicSummaryOfBouts}
 \title{Title}
 \usage{
-basicSummaryOfBouts(bouts, listCalendarsAndBouts, progreso = NULL)
+basicSummaryOfBouts(bouts, generateCalendars, listCalendarsAndBouts,
+  progreso = NULL)
 }
 \arguments{
 \item{bouts}{}

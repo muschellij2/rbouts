@@ -8,6 +8,7 @@
 #' @return
 #' @export
 filterInvalidCalendars=function(calendars, bouts, labelbed="bed"){
+#  print(calendars)
   calendars %>% list2df() %>% 
     left_join(computeInvalidCalendars(calendars,bouts,labelbed), by = c("day", "label")) %>%
     filter(is.na(exclusion)) %>% select(-exclusion) %>% df2list("label")

@@ -4,7 +4,8 @@
 \alias{obtenerBouts}
 \title{Title}
 \usage{
-obtenerBouts(Nodo, fileBIN, nucleos = numCores(4), progreso = NULL)
+obtenerBouts(Nodo, fileBIN, desde = NA, hasta = NA,
+  nucleos = numCores(4), progreso = NULL)
 }
 \arguments{
 \item{Nodo}{}
