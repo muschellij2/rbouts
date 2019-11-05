@@ -1,17 +1,23 @@
 #' @import dplyr
 #' @import assertthat
 #' @import RCurl
-#' @importFrom lubridate dseconds dminutes date interval ddays
+#' @importFrom lubridate dseconds dminutes date interval ddays wday
 #' @importFrom lubridate dhours tz duration day hour minute second as_date
-#' @importFrom purrr map map2 pmap
+#' @importFrom lubridate ymd with_tz ymd_h ymd_hm ymd_hms today as.period now
+#' @importFrom purrr map map2 pmap reduce transpose map2_chr map2_df 
+#' @importFrom purrr map_df map_dbl
 #' @importFrom grDevices dev.off png
 #' @importFrom stats complete.cases
-#' @importFrom ggplot2 ggplot aes geom_segment scale_x_datetime 
+#' @importFrom scales date_format
+#' @importFrom ggplot2 ggplot aes geom_segment scale_x_datetime margin
 #' @importFrom ggplot2 scale_y_continuous xlab scale_color_manual theme
-#' @importFrom ggplot2 element_blank element_text element_line facet_wrap
+#' @importFrom ggplot2 element_blank element_text element_line facet_wrap 
+#' @importFrom ggplot2 geom_text geom_tile ylab scale_x_continuous ggtitle
+#' @importFrom ggplot2 scale_fill_gradient scale_y_discrete theme_classic
 #' @importFrom ggthemes theme_stata
 #' @importFrom utils data head tail
-#' @importFrom stringr str_c
+#' @importFrom tidyr nest
+#' @importFrom stringr str_c str_replace str_sub str_detect
 NULL
 
 nonWear= function(df) {

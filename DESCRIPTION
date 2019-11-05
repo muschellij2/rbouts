@@ -25,4 +25,6 @@ Imports:
     utils,
     stringr,
     ggplot2,
-    ggthemes
+    ggthemes,
+    tidyr,
+    scales
