@@ -24,4 +24,5 @@ Imports:
     grDevices,
     utils,
     stringr,
-    ggplot2
+    ggplot2,
+    ggthemes

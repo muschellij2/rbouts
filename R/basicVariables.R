@@ -6,9 +6,10 @@
 #' @importFrom purrr map map2 pmap
 #' @importFrom grDevices dev.off png
 #' @importFrom stats complete.cases
-#' @importFrom ggplot2 ggplot aes geom_segment scale_x_datetime theme_stata
+#' @importFrom ggplot2 ggplot aes geom_segment scale_x_datetime 
 #' @importFrom ggplot2 scale_y_continuous xlab scale_color_manual theme
 #' @importFrom ggplot2 element_blank element_text element_line facet_wrap
+#' @importFrom ggthemes theme_stata
 #' @importFrom utils data head tail
 #' @importFrom stringr str_c
 NULL
