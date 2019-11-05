@@ -27,4 +27,5 @@ Imports:
     ggplot2,
     ggthemes,
     tidyr,
-    scales
+    scales,
+    ggiraph

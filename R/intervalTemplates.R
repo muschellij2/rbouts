@@ -122,6 +122,8 @@ intervals4Summary_inBedNew=function(df,cama,label="bedNew",first=FALSE){
 ####No se usarán de aquí para abajo
 
 BORRARintervals4Summary_WDvsWE=function(df,first=TRUE,last=TRUE,offsetLabels=dhours(0),starts=dhours(0),duration=dhours(23)+dminutes(59)+dseconds(59)){
+  group = label = NULL
+  rm(list = c("label", "group"))
   intervals4Summary_daily(df,first=first,last=last,offsetLabels=offsetLabels,starts=starts,duration=duration) %>%
     mutate(group=wday(label)==1 | wday(label)==7,
            group=c("WD","WE")[1+as.integer(group)])

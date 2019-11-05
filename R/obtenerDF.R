@@ -11,7 +11,7 @@ obtenerDF=function(Nodo,BIN,dirMeta,desde=NA,hasta=NA){
     
     df=M$metashort %>%
       mutate(
-        timestamp = with_tz(ymd_hms(timestamp),tz = "Europe/Madrid")
+        timestamp = with_tz(ymd_hms(timestamp),tzone = "Europe/Madrid")
       ) %>%  select (timestamp,ENMO,anglez) %>% as_tibble()
     
     

@@ -6,6 +6,7 @@
 #' @importFrom lubridate ymd with_tz ymd_h ymd_hm ymd_hms today as.period now
 #' @importFrom purrr map map2 pmap reduce transpose map2_chr map2_df 
 #' @importFrom purrr map_df map_dbl
+#' @importFrom ggiraph geom_segment_interactive
 #' @importFrom grDevices dev.off png
 #' @importFrom stats complete.cases
 #' @importFrom scales date_format
