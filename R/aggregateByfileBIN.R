@@ -4,19 +4,20 @@
 #' @param aggregateCalendar2BIN 
 #' @param partition 
 #'
-#' @return
+#' @return A \code{data.fame} of output
 #' @export
 aggregateByfileBIN=function(dfDiario,aggregateCalendar2BIN,partition=NULL){
   if (!is.null(partition)) dfDiario=dfDiario %>% left_join(partition)
-  resultado=names(aggregateCalendar2BIN) %>% map_df(function(sufijo){
+  resultado = names(aggregateCalendar2BIN) %>% map_df(function(sufijo){
     resultadoTMP=
       dfDiario %>% filter(str_detect(variable,aggregateCalendar2BIN[[sufijo]]$patronVariable),
                           str_detect(calendar,aggregateCalendar2BIN[[sufijo]]$patronCalendar)) 
-    if(is.null(partition)){
-      resultadoTMP=resultadoTMP     %>%
+    if (is.null(partition)) {
+      resultadoTMP = resultadoTMP     %>%
         nest(-fileBIN,-variable,-calendar)}
-    else { resultadoTMP=resultadoTMP     %>%
-      nest(-fileBIN,-variable,-calendar,-partition)}
+    else { 
+      resultadoTMP = resultadoTMP     %>%
+        nest(-fileBIN,-variable,-calendar,-partition)}
     
     resultadoTMP  %>% 
       mutate(summary=sufijo,

@@ -4,7 +4,7 @@
 \alias{LMVPA_B5}
 \title{Summarises bouts of at least Light Physical Activity (LMVPA, >1,5 METs).
 Can be used to define inactivity BREAKS.
-Criteria: 5min-bouts with >100% of at least LPA, treashold ENMO >40 mg.}
+Criteria: 5min-bouts with >100\% of at least LPA, treashold ENMO >40 mg.}
 \usage{
 LMVPA_B5(df)
 }
@@ -17,5 +17,5 @@ a list with a summary of the periods matching the criteria
 \description{
 Summarises bouts of at least Light Physical Activity (LMVPA, >1,5 METs).
 Can be used to define inactivity BREAKS.
-Criteria: 5min-bouts with >100% of at least LPA, treashold ENMO >40 mg.
+Criteria: 5min-bouts with >100\% of at least LPA, treashold ENMO >40 mg.
 }

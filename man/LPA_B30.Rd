@@ -3,7 +3,7 @@
 \name{LPA_B30}
 \alias{LPA_B30}
 \title{Summarises bouts of Light Physical Activity (LPA, <2,9METs) such as lying, sitting, standing, moving, including light home activities.
-Criteria: 30-minutes-bouts with >80% of Light Physical Activity, treashold ENMO <80mg, but excluding MVPA+1.}
+Criteria: 30-minutes-bouts with >80\% of Light Physical Activity, treashold ENMO <80mg, but excluding MVPA+1.}
 \usage{
 LPA_B30(df, limInf = 40/1000, limSup = 100/1000)
 }
@@ -15,5 +15,5 @@ a list with a summary of the periods matching the criteria
 }
 \description{
 Summarises bouts of Light Physical Activity (LPA, <2,9METs) such as lying, sitting, standing, moving, including light home activities.
-Criteria: 30-minutes-bouts with >80% of Light Physical Activity, treashold ENMO <80mg, but excluding MVPA+1.
+Criteria: 30-minutes-bouts with >80\% of Light Physical Activity, treashold ENMO <80mg, but excluding MVPA+1.
 }

@@ -3,7 +3,7 @@
 \name{VPA_B1}
 \alias{VPA_B1}
 \title{Summarises bouts of Vigorous Physical Activity (VPA, >6METs) such as jogging or running.
-Criteria: 1-min-bout with >80% of VPA, treashold ENMO <500mg.}
+Criteria: 1-min-bout with >80\% of VPA, treashold ENMO <500mg.}
 \usage{
 VPA_B1(df, limInf = 400/1000)
 }
@@ -15,5 +15,5 @@ a list with a summary of the periods matching the criteria
 }
 \description{
 Summarises bouts of Vigorous Physical Activity (VPA, >6METs) such as jogging or running.
-Criteria: 1-min-bout with >80% of VPA, treashold ENMO <500mg.
+Criteria: 1-min-bout with >80\% of VPA, treashold ENMO <500mg.
 }

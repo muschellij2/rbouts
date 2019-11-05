@@ -2,9 +2,9 @@
 #' a boolean vector representing if that epoch belong to one of the intervals
 #'
 #' @param ts vector of timestamps
-#' @param intervalos dataframe of intervals, with columns \code{to} and \code {from}
-#' @param durEpoch amount of time that represents each row of the dataframe (duration of a epoch usually)
-
+#' @param intervalos dataframe of intervals, with columns \code{to} and \code{from}
+#' @param durEpoch amount of time that represents each row of the 
+#' \code{data.frame} (duration of a epoch usually)
 #' @return a logical vector of length(ts) indicating if that time velong to a interval
 #'
 #' @export

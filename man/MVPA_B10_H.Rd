@@ -3,7 +3,7 @@
 \name{MVPA_B10_H}
 \alias{MVPA_B10_H}
 \title{Summarises bouts of Moderate-to-Vigorous Physical Activity (MVPA, >3METs) such as brisk walking during at least 10 min.
-Criteria: 10-minute-bouts with >80% of MVPA, treashold ENMO <100mg.}
+Criteria: 10-minute-bouts with >80\% of MVPA, treashold ENMO <100mg.}
 \usage{
 MVPA_B10_H(df)
 }
@@ -15,5 +15,5 @@ a list with a summary of the periods matching the criteria
 }
 \description{
 Summarises bouts of Moderate-to-Vigorous Physical Activity (MVPA, >3METs) such as brisk walking during at least 10 min.
-Criteria: 10-minute-bouts with >80% of MVPA, treashold ENMO <100mg.
+Criteria: 10-minute-bouts with >80\% of MVPA, treashold ENMO <100mg.
 }

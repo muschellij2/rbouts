@@ -3,7 +3,7 @@
 \name{INA_Break10min}
 \alias{INA_Break10min}
 \title{Summarises bouts of at least Light Physical Activity (LMVPA, >1,5 METs).
-Criteria: 10 min-bouts with >70% of at least LPA, treashold ENMO >20 mg.}
+Criteria: 10 min-bouts with >70\% of at least LPA, treashold ENMO >20 mg.}
 \usage{
 INA_Break10min(df)
 }
@@ -15,5 +15,5 @@ a list with a summary of the periods matching the criteria
 }
 \description{
 Summarises bouts of at least Light Physical Activity (LMVPA, >1,5 METs).
-Criteria: 10 min-bouts with >70% of at least LPA, treashold ENMO >20 mg.
+Criteria: 10 min-bouts with >70\% of at least LPA, treashold ENMO >20 mg.
 }

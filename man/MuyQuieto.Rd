@@ -3,9 +3,9 @@
 \name{MuyQuieto}
 \alias{MuyQuieto}
 \title{Summarises bouts of very quiet home circuits (<1,5METs).
-Mainly lying or sitting, but allows for a 20% of interruptions, including quiet moving circuits principally at nightime.
+Mainly lying or sitting, but allows for a 20\% of interruptions, including quiet moving circuits principally at nightime.
 Varible used to define In Bed criteria.
-Criteria: 30-minutes-bouts with >80% of inactivity, treashold ENMO <25mg.}
+Criteria: 30-minutes-bouts with >80\% of inactivity, treashold ENMO <25mg.}
 \usage{
 MuyQuieto(df)
 }
@@ -17,7 +17,7 @@ a list with a summary of the periods matching the criteria
 }
 \description{
 Summarises bouts of very quiet home circuits (<1,5METs).
-Mainly lying or sitting, but allows for a 20% of interruptions, including quiet moving circuits principally at nightime.
+Mainly lying or sitting, but allows for a 20\% of interruptions, including quiet moving circuits principally at nightime.
 Varible used to define In Bed criteria.
-Criteria: 30-minutes-bouts with >80% of inactivity, treashold ENMO <25mg.
+Criteria: 30-minutes-bouts with >80\% of inactivity, treashold ENMO <25mg.
 }

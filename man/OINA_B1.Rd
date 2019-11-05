@@ -3,7 +3,7 @@
 \name{OINA_B1}
 \alias{OINA_B1}
 \title{Summarises Inactivity bouts (INA, <1.5METs). But no SIBs are included. Activities such as lying, sitting, standing, moving slowly.
-Criteria: 1-minute-bout with 100% of inactivity, treashold ENMO <40mg.}
+Criteria: 1-minute-bout with 100\% of inactivity, treashold ENMO <40mg.}
 \usage{
 OINA_B1(df, limSup = 40/1000)
 }
@@ -15,5 +15,5 @@ a list with a summary of the periods matching the criteria
 }
 \description{
 Summarises Inactivity bouts (INA, <1.5METs). But no SIBs are included. Activities such as lying, sitting, standing, moving slowly.
-Criteria: 1-minute-bout with 100% of inactivity, treashold ENMO <40mg.
+Criteria: 1-minute-bout with 100\% of inactivity, treashold ENMO <40mg.
 }

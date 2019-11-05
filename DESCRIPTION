@@ -6,8 +6,9 @@ Author: Francisco Javier Baron-Lopez, Julia Wärnberg
 Maintainer: Francisco Javier Baron-Lopez <baron@uma.es>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: GPL 3.0
+License: GPL-3
 Encoding: UTF-8
+Depends: R (>= 2.10)
 LazyData: true
 RoxygenNote: 6.1.1
 Imports: 
@@ -15,4 +16,12 @@ Imports:
     lubridate,
     parallel,
     purrr,
-    tidyverse
+    tidyverse,
+    dplyr,
+    RCurl,
+    assertthat,
+    stats,
+    grDevices,
+    utils,
+    stringr,
+    ggplot2

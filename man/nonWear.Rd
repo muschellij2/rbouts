@@ -2,7 +2,7 @@
 % Please edit documentation in R/basicVariables.R
 \name{nonWear}
 \alias{nonWear}
-\title{summarises Non Wear time.
+\title{Summarises Non Wear time.
 Criteria: GGIR. Viene de los epochs, creado en fase 1. FALTA describirlo.}
 \usage{
 nonWear(df)
@@ -14,6 +14,6 @@ nonWear(df)
 a list with a summary of the periods matching the criteria
 }
 \description{
-summarises Non Wear time.
+Summarises Non Wear time.
 Criteria: GGIR. Viene de los epochs, creado en fase 1. FALTA describirlo.
 }

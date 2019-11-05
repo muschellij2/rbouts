@@ -10,9 +10,10 @@ interval2criterio(ts, intervalos, durEpoch = dseconds(5))
 \arguments{
 \item{ts}{vector of timestamps}
 
-\item{intervalos}{dataframe of intervals, with columns \code{to} and \code {from}}
+\item{intervalos}{dataframe of intervals, with columns \code{to} and \code{from}}
 
-\item{durEpoch}{amount of time that represents each row of the dataframe (duration of a epoch usually)}
+\item{durEpoch}{amount of time that represents each row of the 
+\code{data.frame} (duration of a epoch usually)}
 }
 \value{
 a logical vector of length(ts) indicating if that time velong to a interval

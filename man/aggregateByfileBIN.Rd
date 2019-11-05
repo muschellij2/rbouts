@@ -13,6 +13,9 @@ aggregateByfileBIN(dfDiario, aggregateCalendar2BIN, partition = NULL)
 
 \item{partition}{}
 }
+\value{
+A \code{data.fame} of output
+}
 \description{
 Title
 }
